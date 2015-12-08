@@ -1,0 +1,315 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix void:     <http://rdfs.org/ns/void#> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix org:      <http://www.w3.org/ns/org#> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+
+@prefix qb:       <http://purl.org/linked-data/cube#> .
+@prefix qb4o: 	  <http://purl.org/olap#> .
+
+@prefix konsep:	<http://contoh.com/konsep#> .
+@prefix stats:	<http://contoh.com/statistik#> .
+@prefix vocab: 	<http://vocab.com/vocab#> .
+@prefix dimensi: 	<http://dimensi.com/dimensi#> .
+
+@prefix sdmx:    	 <http://purl.org/linked-data/sdmx#> .
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
+
+# -- Data Set --------------------------------------------
+stats:anggotapramukaSBY2011
+	a qb:DataSet ;
+	rdfs:label "Anggota_Pramuka_perkecamatan_surabaya_2011" ;
+	qb:structure stats:dsdjumlah ;
+	sdmx−attribute:statPop <http://dbpedia.org/resource/People> ;
+# -- Data structure definition ----------------------------
+stats:dsdjumlah
+	qb:component [
+qb:measure stats:jumlah_anggota
+],[
+qb:dimension dimensi:kecamatan
+],[
+qb:dimension dimensi:tingkatan
+],[
+qb:dimension dimensi:golongan
+] ;
+a qb:DataStructureDefinition .
+# -- Dimensions and measures  -----------------------------
+dimensi:tingkatan a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Tingkatan" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:tingkatan ;
+dimensi:golongan a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Golongan" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:golongan ;
+dimensi:kecamatan a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Kecamatan" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:kecamatan_surabaya ;
+stats:jumlah_anggota a qb:MeasureProperty ;
+	rdfs: label "jumlah_anggota" ;
+	rdfs:range xsd:integer ;
+# -- Code lists -------------------------------------------
+konsep:tingkatan a skos:ConceptScheme ;
+ rdfs:label "Tingkatan_Pramuka" ;
+skos: hasTopConcept konsep:penegak, konsep:penggalang, konsep:siaga, konsep:majelis_pembimbing, konsep:pelatih, konsep:pembina ;
+skos:notation "tingkatan" .
+
+konsep:golongan a skos:ConceptScheme ;
+ rdfs:label "Golongan" ;
+skos:hasTopConcept konsep:sumber_didik, konsep:sasaran_didik ;
+skos:notation "golongan" .
+
+konsep:kecamatan_surabaya a skos:ConceptScheme ;
+ rdfs:label "Kecamatan_di_Surabaya" ;
+skos:hasTopConcept kecamatan:Tegalsari, kecamatan:Genteng, kecamatan:Bubutan, kecamatan:Simokerto, kecamatan:Pabean_Cantikan, kecamatan:Semampir, kecamatan:Krembangan, kecamatan:Kenjeran, kecamatan:Bulak, kecamatan:Tambaksari, kecamatan:Gubeng, kecamatan:Rungkut, kecamatan:Tenggilis_Mejoyo, kecamatan:Gunung_Anyar, kecamatan:Sukolilo, kecamatan:Mulyorejo, kecamatan:Sawahan, kecamatan:Wonokromo, kecamatan:Karangpilang, kecamatan:Dukuh_Pakis, kecamatan:Wiyung, kecamatan:Wonocolo, kecamatan:Gayungan, kecamatan:Jambangan, kecamatan:Tandes, kecamatan:Sukomanunggal, kecamatan:Asemrowo, kecamatan:Benowo, kecamatan:Pakal, kecamatan:Lakarsantri, kecamatan:Sambikerep ;
+skos:notation "Kecamatan_Surabaya" .
+
+
+
+# -- Concepts -----------------------------------------
+konsep:penegak
+	a skos:Concept ;
+	rdfs:label "Penegak" ;
+	skos:inScheme konsep:tingkatan .
+konsep:penggalang
+	a skos:Concept ;
+	rdfs:label "penggalang" ;
+	skos:inScheme konsep:tingkatan .
+konsep:siaga
+	a skos:Concept ;
+	rdfs:label "siaga" ;
+	skos:inScheme konsep:tingkatan .
+konsep:majelis_pembimbing
+	a skos:Concept ;
+	rdfs:label "majelis_pembimbing" ;
+	skos:inScheme konsep:tingkatan .
+konsep:pelatih
+	a skos:Concept ;
+	rdfs:label "pelatih" ;
+	skos:inScheme konsep:tingkatan .
+konsep:pembina
+	a skos:Concept ;
+	rdfs:label "pembina" ;
+	skos:inScheme konsep:tingkatan .
+konsep:sumber_didik
+	a skos:Concept ;
+	rdfs:label "sumber_didik" ;
+	skos:inScheme konsep:golongan .
+konsep:sasaran_didik
+	a skos:Concept ;
+	rdfs:label "sasaran_didik" ;
+	skos:inScheme konsep:golongan .
+
+
+
+vocab:kecamatan a rdfs:Class .
+kecamatan:Tegalsari 
+	a skos:Concept ;
+	rdfs:label "Tegalsari" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Genteng 
+	a skos:Concept ;
+	rdfs:label "Genteng" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Bubutan 
+	a skos:Concept ;
+	rdfs:label "Bubutan" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Simokerto 
+	a skos:Concept ;
+	rdfs:label "Simokerto" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Pabean_Cantikan 
+	a skos:Concept ;
+	rdfs:label "Pabean_Cantikan" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Semampir 
+	a skos:Concept ;
+	rdfs:label "Semampir" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Krembangan 
+	a skos:Concept ;
+	rdfs:label "Krembangan" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Kenjeran 
+	a skos:Concept ;
+	rdfs:label "Kenjeran" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Bulak 
+	a skos:Concept ;
+	rdfs:label "Bulak" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Tambaksari 
+	a skos:Concept ;
+	rdfs:label "Tambaksari" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Gubeng 
+	a skos:Concept ;
+	rdfs:label "Gubeng" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Rungkut 
+	a skos:Concept ;
+	rdfs:label "Rungkut" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Tenggilis_Mejoyo 
+	a skos:Concept ;
+	rdfs:label "Tenggilis_Mejoyo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Gunung_Anyar 
+	a skos:Concept ;
+	rdfs:label "Gunung_Anyar" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Sukolilo 
+	a skos:Concept ;
+	rdfs:label "Sukolilo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Mulyorejo 
+	a skos:Concept ;
+	rdfs:label "Mulyorejo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Sawahan 
+	a skos:Concept ;
+	rdfs:label "Sawahan" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Wonokromo 
+	a skos:Concept ;
+	rdfs:label "Wonokromo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Karangpilang 
+	a skos:Concept ;
+	rdfs:label "Karangpilang" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Dukuh_Pakis 
+	a skos:Concept ;
+	rdfs:label "Dukuh_Pakis" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Wiyung 
+	a skos:Concept ;
+	rdfs:label "Wiyung" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Wonocolo 
+	a skos:Concept ;
+	rdfs:label "Wonocolo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Gayungan 
+	a skos:Concept ;
+	rdfs:label "Gayungan" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Jambangan 
+	a skos:Concept ;
+	rdfs:label "Jambangan" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Tandes 
+	a skos:Concept ;
+	rdfs:label "Tandes" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Sukomanunggal 
+	a skos:Concept ;
+	rdfs:label "Sukomanunggal" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Asemrowo 
+	a skos:Concept ;
+	rdfs:label "Asemrowo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Benowo 
+	a skos:Concept ;
+	rdfs:label "Benowo" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Pakal 
+	a skos:Concept ;
+	rdfs:label "Pakal" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Lakarsantri 
+	a skos:Concept ;
+	rdfs:label "Lakarsantri" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+kecamatan:Sambikerep 
+	a skos:Concept ;
+	rdfs:label "Sambikerep" ;
+	skos:inScheme konsep:kecamatan_surabaya .
+# -- Observations -----------------------------------------
+stats:data_1_1 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Tegalsari ;
+	dimensi:tingkatan konsep:majelis_pembimbing ;
+	dimensi:golongan konsep:sumber_didik ;
+	stats:jumlah_anggota 113 .
+stats:data_1_2 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Tegalsari ;
+	dimensi:tingkatan konsep:pelatih ;
+	dimensi:golongan konsep:sumber_didik ;
+	stats:jumlah_anggota 0 .
+stats:data_1_3 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Tegalsari ;
+	dimensi:tingkatan konsep:pembina ;
+	dimensi:golongan konsep:sumber_didik ;
+	stats:jumlah_anggota 52 .
+stats:data_1_4 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Tegalsari ;
+	dimensi:tingkatan konsep:penegak ;
+	dimensi:golongan konsep:sasaran_didik ;
+	stats:jumlah_anggota 75 .
+stats:data_1_5 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Tegalsari ;
+	dimensi:tingkatan konsep:penggalang ;
+	dimensi:golongan konsep:sasaran_didik ;
+	stats:jumlah_anggota 1017 .
+stats:data_1_6 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Tegalsari ;
+	dimensi:tingkatan konsep:siaga ;
+	dimensi:golongan konsep:sasaran_didik ;
+	stats:jumlah_anggota 871 .
+stats:data_2_1 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Genteng ;
+	dimensi:tingkatan konsep:majelis_pembimbing ;
+	dimensi:golongan konsep:sumber_didik ;
+	stats:jumlah_anggota 84 .
+stats:data_2_2 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Genteng ;
+	dimensi:tingkatan konsep:pelatih ;
+	dimensi:golongan konsep:sumber_didik ;
+	stats:jumlah_anggota 0 .
+stats:data_2_3 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Genteng ;
+	dimensi:tingkatan konsep:pembina ;
+	dimensi:golongan konsep:sumber_didik ;
+	stats:jumlah_anggota 35 .
+stats:data_2_4 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Genteng ;
+	dimensi:tingkatan konsep:penegak ;
+	dimensi:golongan konsep:sasaran_didik ;
+	stats:jumlah_anggota 83 .
+stats:data_2_5 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Genteng ;
+	dimensi:tingkatan konsep:penggalang ;
+	dimensi:golongan konsep:sasaran_didik ;
+	stats:jumlah_anggota 921 .
+stats:data_2_6 a qb:Observation  ;
+	qb:dataSet stats:anggotapramukaSBY2011
+	dimensi:kecamatan kecamatan:Genteng ;
+	dimensi:tingkatan konsep:siaga ;
+	dimensi:golongan konsep:sasaran_didik ;
+	stats:jumlah_anggota 549 .
