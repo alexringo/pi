@@ -25,13 +25,13 @@
 @prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
 @prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
 
-@prefix :       	<http://olap4ld.googlecode.com/git/OLAP4LD-trunk/tests/ssb001/ttl/example.ttl#> .
+@prefix :       	<http://pastebin.com/raw.php?i=839G2u72#> .
 
 # -- Data Set --------------------------------------------
 
 :ds
 	a qb:DataSet ;
-	rdfs:label "Example Star Schema Benchmark Dataset"@en ;
+	rdfs:label "Pastebin Example Star Schema Dataset"@en ;
 	qb:structure :dsd.	
 
 # -- Data structure definition ----------------------------
@@ -182,7 +182,7 @@
     :lo_partkey :part_1 ;
     :lo_suppkey :supplier_1 ;
     :lo_quantity 17 ;
-    :lo_discount 4e0 ;
+    :lo_discount 100 ;
     :lo_extendedprice 2471035e0 ;
     :lo_supplycost 87213 ;
     :lo_revenue 2372193 ;
@@ -242,9 +242,8 @@
     :lo_partkey :part_3 ;
     :lo_suppkey :supplier_2 ;
     :lo_quantity 17 ;
-    :lo_discount 4e0 ;
+    :lo_discount 100 ;
     :lo_extendedprice 2471035e0 ;
     :lo_supplycost 87213 ;
     :lo_revenue 2372193 ;
     .
-
