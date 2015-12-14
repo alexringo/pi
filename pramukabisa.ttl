@@ -103,35 +103,35 @@ skos:notation "Kecamatan_Surabaya"
 .
 
 # -- Concepts -----------------------------------------
-Konsep:penegak a skos:Concept;
+konsep:penegak a skos:Concept;
 	rdfs:label "Penegak";
 	skos:inScheme konsep:tingkatan_sasaran_didik 
 	.
-Konsep:penggalang
+konsep:penggalang
 	a skos:Concept ;
 	rdfs:label "penggalang" ;
 	skos:inScheme konsep:tingkatan_sasaran_didik 
 	.
-Konsep:siaga
+konsep:siaga
 	a skos:Concept ;
 	rdfs:label "siaga" ;
 	skos:inScheme konsep:tingkatan_sasaran_didik 
 	.
-Konsep:majelis_pembimbing
+konsep:majelis_pembimbing
 	a skos:Concept ;
 	rdfs:label "majelis_pembimbing" ;
 	skos:inScheme konsep:tingkatan_sumber_didik .
-Konsep:pelatih
+konsep:pelatih
 	a skos:Concept ;
 	rdfs:label "pelatih" ;
 	skos:inScheme konsep:tingkatan_sumber_didik .
-Konsep:pembina
+konsep:pembina
 	a skos:Concept ;
 	rdfs:label "pembina" ;
 	skos:inScheme konsep:tingkatan_sumber_didik .
 
 
-
+vocab:kecamatan a rdfs:Class .
 kecamatan:Tegalsari 
 	a skos:Concept ;
 	rdfs:label "Tegalsari" ;
