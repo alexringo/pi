@@ -87,14 +87,12 @@ stats:jumlah_anggota a qb:MeasureProperty ;
 konsep:tingkatan_sumber_didik a skos:ConceptScheme ;
  rdfs: label "Tingkatan_Sumber_Didik" ;
 skos: hasTopConcept konsep:majelis_pembimbing, konsep:pelatih, konsep:pembina;
-skos:notation "tingkatan_sumber" ;
-.
+skos:notation "tingkatan_sumber" .
 
 konsep:tingkatan_sasaran_didik a skos:ConceptScheme ;
  rdfs: label "Tingkatan_Sasaran_Didik" ;
 skos: hasTopConcept konsep: penegak, konsep: penggalang, konsep:siaga;
-skos:notation "tingkatan_sasaran" ;
-.
+skos:notation "tingkatan_sasaran" .
 
 konsep: kecamatan_surabaya a skos:ConceptScheme ;
  rdfs: label "Kecamatan_di_Surabaya" ;
