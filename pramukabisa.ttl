@@ -32,8 +32,7 @@ stats:sumberdidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sumber_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sumber ;
-	qb:slice	stats:anggota_kecamatan ;
-	.
+	qb:slice	stats:anggota_kecamatan	.
 
 stats:sasarandidikpramukaSBY2011
 	a qb:DataSet ;
