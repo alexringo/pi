@@ -30,7 +30,7 @@
 # -- Data Set --------------------------------------------
 stats:sumberdidikpramukaSBY2011
 	a qb:DataSet ;
-	rdfs:label “Sumber_didik_perkecamatan_surabaya_2011” ;
+	rdfs:label "Sumber_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sumber ;
 	sdmx−attribute:statPop <http://dbpedia.org/resource/People> ;
 	qb:slice	stats: anggota_kecamatan ;
@@ -38,7 +38,7 @@ stats:sumberdidikpramukaSBY2011
 
 stats:sasarandidikpramukaSBY2011
 	a qb:DataSet ;
-	rdfs:label “Sasaran_didik_perkecamatan_surabaya_2011” ;
+	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sasaran ;
 	sdmx−attribute:statPop <http://dbpedia.org/resource/People> ;
 	.
@@ -69,41 +69,41 @@ a qb:DataStructureDefinition ;
 
 # -- Dimensions and measures  -----------------------------
 dimensi:tingkatan_sumber_didik a rdf:Property, qb:DimensionProperty;
-	rdfs:label “Tingkatan_Sumber_Didik” ;
+	rdfs:label "Tingkatan_Sumber_Didik" ;
 	rdfs:range skos:Concept ;
 	qb:codeList konsep:tingkatan_sumber_didik ;
 	.
 dimensi:tingkatan_sasaran_didik a rdf:Property, qb:DimensionProperty;
-	rdfs:label “Tingkatan_Sasaran_Didik” ;
+	rdfs:label "Tingkatan_Sasaran_Didik" ;
 	rdfs:range skos:Concept ;
 	qb:codeList konsep:tingkatan_sasaran_didik ;
 	.
 dimensi:kecamatan a rdf:Property, qb:DimensionProperty;
-	rdfs:label “Kecamatan” ;
+	rdfs:label "Kecamatan" ;
 	rdfs:range skos:Concept ;
 	qb:codeList konsep:kecamatan_surabaya ;
 	.
 stats:jumlah_anggota a qb:MeasureProperty ;
-	rdfs: label “jumlah_anggota” ;
+	rdfs: label "jumlah_anggota" ;
 	rdfs:range xsd:integer ;
 	.
 # -- Code lists -------------------------------------------
 konsep:tingkatan_sumber_didik a skos:ConceptScheme ;
- rdfs: label “Tingkatan_Sumber_Didik” ;
+ rdfs: label "Tingkatan_Sumber_Didik" ;
 skos: hasTopConcept konsep:majelis_pembimbing, konsep:pelatih, konsep:pembina;
-skos:notation “tingkatan_sumber” ;
+skos:notation "tingkatan_sumber" ;
 .
 
 konsep:tingkatan_sasaran_didik a skos:ConceptScheme ;
- rdfs: label “Tingkatan_Sasaran_Didik” ;
+ rdfs: label "Tingkatan_Sasaran_Didik" ;
 skos: hasTopConcept konsep: penegak, konsep: penggalang, konsep:siaga;
-skos:notation “tingkatan_sasaran” ;
+skos:notation "tingkatan_sasaran" ;
 .
 
 konsep: kecamatan_surabaya a skos:ConceptScheme ;
- rdfs: label “Kecamatan_di_Surabaya” ;
+ rdfs: label "Kecamatan_di_Surabaya" ;
 skos: hasTopConcept kecamatan:Tegalsari, kecamatan:Genteng, kecamatan:Bubutan, kecamatan:Simokerto, kecamatan:Pabean_Cantikan, kecamatan:Semampir, kecamatan:Krembangan, kecamatan:Kenjeran, kecamatan:Bulak, kecamatan:Tambaksari, kecamatan:Gubeng, kecamatan:Rungkut, kecamatan:Tenggilis_Mejoyo, kecamatan:Gunung_Anyar, kecamatan:Sukolilo, kecamatan:Mulyorejo, kecamatan:Sawahan, kecamatan:Wonokromo, kecamatan:Karangpilang, kecamatan:Dukuh_Pakis, kecamatan:Wiyung, kecamatan:Wonocolo, kecamatan:Gayungan, kecamatan:Jambangan, kecamatan:Tandes, kecamatan:Sukomanunggal, kecamatan:Asemrowo, kecamatan:Benowo, kecamatan:Pakal, kecamatan:Lakarsantri, kecamatan:Sambikerep ;
-skos:notation “Kecamatan_Surabaya” ;
+skos:notation "Kecamatan_Surabaya" ;
 .
 
 
@@ -111,154 +111,154 @@ skos:notation “Kecamatan_Surabaya” ;
 # -- Concepts -----------------------------------------
 Konsep: penegak
 	a skos:Concept ;
-	rdfs:label “Penegak” ;
+	rdfs:label "Penegak" ;
 	skos: inScheme konsep:tingkatan_sasaran_didik .
 Konsep: penggalang
 	a skos:Concept ;
-	rdfs:label “penggalang” ;
+	rdfs:label "penggalang" ;
 	skos: inScheme konsep:tingkatan_sasaran_didik .
 Konsep: siaga
 	a skos:Concept ;
-	rdfs:label “siaga” ;
+	rdfs:label "siaga" ;
 	skos: inScheme konsep:tingkatan_sasaran_didik .
 Konsep: majelis_pembimbing
 	a skos:Concept ;
-	rdfs:label “majelis_pembimbing” ;
+	rdfs:label "majelis_pembimbing" ;
 	skos: inScheme konsep:tingkatan_sumber_didik .
 Konsep: pelatih
 	a skos:Concept ;
-	rdfs:label “pelatih” ;
+	rdfs:label "pelatih" ;
 	skos: inScheme konsep:tingkatan_sumber_didik .
 Konsep: pembina
 	a skos:Concept ;
-	rdfs:label “pembina” ;
+	rdfs:label "pembina" ;
 	skos: inScheme konsep:tingkatan_sumber_didik .
 
 
 vocab:kecamatan a rdfs:Class .
 kecamatan:Tegalsari 
 	a skos:Concept ;
-	rdfs:label “Tegalsari” ;
+	rdfs:label "Tegalsari" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Genteng 
 	a skos:Concept ;
-	rdfs:label “Genteng” ;
+	rdfs:label "Genteng" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Bubutan 
 	a skos:Concept ;
-	rdfs:label “Bubutan” ;
+	rdfs:label "Bubutan" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Simokerto 
 	a skos:Concept ;
-	rdfs:label “Simokerto” ;
+	rdfs:label "Simokerto" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Pabean_Cantikan 
 	a skos:Concept ;
-	rdfs:label “Pabean_Cantikan” ;
+	rdfs:label "Pabean_Cantikan" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Semampir 
 	a skos:Concept ;
-	rdfs:label “Semampir” ;
+	rdfs:label "Semampir" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Krembangan 
 	a skos:Concept ;
-	rdfs:label “Krembangan” ;
+	rdfs:label "Krembangan" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Kenjeran 
 	a skos:Concept ;
-	rdfs:label “Kenjeran” ;
+	rdfs:label "Kenjeran" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Bulak 
 	a skos:Concept ;
-	rdfs:label “Bulak” ;
+	rdfs:label "Bulak" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Tambaksari 
 	a skos:Concept ;
-	rdfs:label “Tambaksari” ;
+	rdfs:label "Tambaksari" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Gubeng 
 	a skos:Concept ;
-	rdfs:label “Gubeng” ;
+	rdfs:label "Gubeng" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Rungkut 
 	a skos:Concept ;
-	rdfs:label “Rungkut” ;
+	rdfs:label "Rungkut" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Tenggilis_Mejoyo 
 	a skos:Concept ;
-	rdfs:label “Tenggilis_Mejoyo” ;
+	rdfs:label "Tenggilis_Mejoyo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Gunung_Anyar 
 	a skos:Concept ;
-	rdfs:label “Gunung_Anyar” ;
+	rdfs:label "Gunung_Anyar" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Sukolilo 
 	a skos:Concept ;
-	rdfs:label “Sukolilo” ;
+	rdfs:label "Sukolilo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Mulyorejo 
 	a skos:Concept ;
-	rdfs:label “Mulyorejo” ;
+	rdfs:label "Mulyorejo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Sawahan 
 	a skos:Concept ;
-	rdfs:label “Sawahan” ;
+	rdfs:label "Sawahan" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Wonokromo 
 	a skos:Concept ;
-	rdfs:label “Wonokromo” ;
+	rdfs:label "Wonokromo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Karangpilang 
 	a skos:Concept ;
-	rdfs:label “Karangpilang” ;
+	rdfs:label "Karangpilang" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Dukuh_Pakis 
 	a skos:Concept ;
-	rdfs:label “Dukuh_Pakis” ;
+	rdfs:label "Dukuh_Pakis" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Wiyung 
 	a skos:Concept ;
-	rdfs:label “Wiyung” ;
+	rdfs:label "Wiyung" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Wonocolo 
 	a skos:Concept ;
-	rdfs:label “Wonocolo” ;
+	rdfs:label "Wonocolo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Gayungan 
 	a skos:Concept ;
-	rdfs:label “Gayungan” ;
+	rdfs:label "Gayungan" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Jambangan 
 	a skos:Concept ;
-	rdfs:label “Jambangan” ;
+	rdfs:label "Jambangan" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Tandes 
 	a skos:Concept ;
-	rdfs:label “Tandes” ;
+	rdfs:label "Tandes" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Sukomanunggal 
 	a skos:Concept ;
-	rdfs:label “Sukomanunggal” ;
+	rdfs:label "Sukomanunggal" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Asemrowo 
 	a skos:Concept ;
-	rdfs:label “Asemrowo” ;
+	rdfs:label "Asemrowo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Benowo 
 	a skos:Concept ;
-	rdfs:label “Benowo” ;
+	rdfs:label "Benowo" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Pakal 
 	a skos:Concept ;
-	rdfs:label “Pakal” ;
+	rdfs:label "Pakal" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Lakarsantri 
 	a skos:Concept ;
-	rdfs:label “Lakarsantri” ;
+	rdfs:label "Lakarsantri" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 kecamatan:Sambikerep 
 	a skos:Concept ;
-	rdfs:label “Sambikerep” ;
+	rdfs:label "Sambikerep" ;
 	skos: inScheme konsep:kecamatan_surabaya .
 # -- Observations -----------------------------------------
 stats:data_1_1 a qb:Observation  ;
