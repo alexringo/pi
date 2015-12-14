@@ -100,8 +100,7 @@ skos:hasTopConcept kecamatan:Tegalsari, kecamatan:Genteng, kecamatan:Bubutan, ke
 skos:notation "Kecamatan_Surabaya" .
 
 # -- Concepts -----------------------------------------
-Konsep:penegak
-	a skos:Concept ;
+Konsep:penegak a skos:Concept ;
 	rdfs:label "Penegak" ;
 	skos:inScheme konsep:tingkatan_sasaran_didik .
 Konsep:penggalang
