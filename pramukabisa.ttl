@@ -84,19 +84,19 @@ stats:jumlah_anggota a qb:MeasureProperty ;
 	rdfs:range xsd:integer ;
 	.
 # -- Code lists -------------------------------------------
-konsep:tingkatan_sumber_didik a skos:ConceptScheme ;
+konsep:tingkatan_sumber_didik a skos:ConceptScheme, sdmx:CodeList ;
 rdfs:label "Tingkatan_Sumber_Didik" ;
 skos:hasTopConcept konsep:majelis_pembimbing, konsep:pelatih, konsep:pembina;
 skos:notation "tingkatan_sumber" 
 .
 
-konsep:tingkatan_sasaran_didik a skos:ConceptScheme ;
+konsep:tingkatan_sasaran_didik a skos:ConceptScheme, sdmx:CodeList ;
 rdfs:label "Tingkatan_Sasaran_Didik" ;
 skos:hasTopConcept konsep:penegak, konsep:penggalang, konsep:siaga;
 skos:notation "tingkatan_sasaran" 
 .
 
-konsep:kecamatan_surabaya a skos:ConceptScheme ;
+konsep:kecamatan_surabaya a skos:ConceptScheme, sdmx:CodeList ;
 rdfs:label "Kecamatan_di_Surabaya" ;
 skos:hasTopConcept kecamatan:Tegalsari, kecamatan:Genteng, kecamatan:Bubutan, kecamatan:Simokerto, kecamatan:Pabean_Cantikan, kecamatan:Semampir, kecamatan:Krembangan, kecamatan:Kenjeran, kecamatan:Bulak, kecamatan:Tambaksari, kecamatan:Gubeng, kecamatan:Rungkut, kecamatan:Tenggilis_Mejoyo, kecamatan:Gunung_Anyar, kecamatan:Sukolilo, kecamatan:Mulyorejo, kecamatan:Sawahan, kecamatan:Wonokromo, kecamatan:Karangpilang, kecamatan:Dukuh_Pakis, kecamatan:Wiyung, kecamatan:Wonocolo, kecamatan:Gayungan, kecamatan:Jambangan, kecamatan:Tandes, kecamatan:Sukomanunggal, kecamatan:Asemrowo, kecamatan:Benowo, kecamatan:Pakal, kecamatan:Lakarsantri, kecamatan:Sambikerep ;
 skos:notation "Kecamatan_Surabaya" 
