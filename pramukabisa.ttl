@@ -37,8 +37,7 @@ stats:sumberdidikpramukaSBY2011
 stats:sasarandidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
-	qb:structure stats:dsdjumlah_sasaran ;
-	.
+	qb:structure stats:dsdjumlah_sasaran .
 
 # -- Data structure definition ----------------------------
 stats:dsdjumlah_sumber
