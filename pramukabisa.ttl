@@ -129,27 +129,27 @@ vocab:kecamatan a rdfs:Class .
 kecamatan:Tegalsari 
 	a skos:Concept ;
 	rdfs:label "Tegalsari" ;
-	skos: inScheme konsep:kecamatan_surabaya .
+	skos:inScheme konsep:kecamatan_surabaya .
 kecamatan:Genteng 
 	a skos:Concept ;
 	rdfs:label "Genteng" ;
-	skos: inScheme konsep:kecamatan_surabaya .
+	skos:inScheme konsep:kecamatan_surabaya .
 kecamatan:Bubutan 
 	a skos:Concept ;
 	rdfs:label "Bubutan" ;
-	skos: inScheme konsep:kecamatan_surabaya .
+	skos:inScheme konsep:kecamatan_surabaya .
 kecamatan:Simokerto 
 	a skos:Concept ;
 	rdfs:label "Simokerto" ;
-	skos: inScheme konsep:kecamatan_surabaya .
+	skos:inScheme konsep:kecamatan_surabaya .
 kecamatan:Pabean_Cantikan 
 	a skos:Concept ;
 	rdfs:label "Pabean_Cantikan" ;
-	skos: inScheme konsep:kecamatan_surabaya .
+	skos:inScheme konsep:kecamatan_surabaya .
 kecamatan:Semampir 
 	a skos:Concept ;
 	rdfs:label "Semampir" ;
-	skos: inScheme konsep:kecamatan_surabaya .
+	skos:inScheme konsep:kecamatan_surabaya .
 kecamatan:Krembangan 
 	a skos:Concept ;
 	rdfs:label "Krembangan" ;
