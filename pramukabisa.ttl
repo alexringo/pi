@@ -131,7 +131,7 @@ Konsep:pembina
 	skos:inScheme konsep:tingkatan_sumber_didik .
 
 
-vocab:kecamatan a rdfs:Class .
+
 kecamatan:Tegalsari 
 	a skos:Concept ;
 	rdfs:label "Tegalsari" ;
