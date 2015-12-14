@@ -32,7 +32,6 @@ stats:sumberdidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sumber_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sumber ;
-	sdmx−attribute:statPop <http://dbpedia.org/resource/People> ;
 	qb:slice	stats: anggota_kecamatan ;
 	.
 
@@ -40,7 +39,6 @@ stats:sasarandidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sasaran ;
-	sdmx−attribute:statPop <http://dbpedia.org/resource/People> ;
 	.
 
 # -- Data structure definition ----------------------------
