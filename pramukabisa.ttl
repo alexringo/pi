@@ -62,8 +62,6 @@ qb:dimension dimensi:tingkatan_sasaran_didik
 a qb:DataStructureDefinition ;
 .
 
-
-# -- Dimensions and measures  -----------------------------
 dimensi:tingkatan_sumber_didik a rdf:Property, qb:DimensionProperty;
 	rdfs:label "Tingkatan_Sumber_Didik" ;
 	rdfs:range skos:Concept ;
