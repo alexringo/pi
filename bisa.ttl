@@ -1,0 +1,81 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix void:     <http://rdfs.org/ns/void#> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix org:      <http://www.w3.org/ns/org#> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+
+@prefix qb:       <http://purl.org/linked-data/cube#> .
+@prefix qb4o: 	  <http://purl.org/olap#> .
+
+@prefix konsep:	<http://contoh.com/konsep#> .
+@prefix stats:	<http://contoh.com/statistik#> .
+@prefix vocab: 	<http://vocab.com/vocab#> .
+@prefix dimensi: 	<http://dimensi.com/dimensi#> .
+
+@prefix sdmx:    	 <http://purl.org/linked-data/sdmx#> .
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
+
+stats:sumberdidikpramukaSBY2011
+	a qb:DataSet ;
+	rdfs:label "Sumber_didik_perkecamatan_surabaya_2011" ;
+	qb:structure stats:dsdjumlah_sumber ;
+	qb:slice	stats:anggota_kecamatan	.
+
+stats:sasarandidikpramukaSBY2011
+	a qb:DataSet ;
+	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
+	qb:structure stats:dsdjumlah_sasaran .
+
+stats:dsdjumlah_sumber
+	qb:component [
+qb:measure stats:jumlah_anggota
+],[
+qb:dimension dimensi:kecamatan
+],[
+qb:dimension dimensi:tingkatan_sumber_didik
+];
+a qb:DataStructureDefinition ;
+.
+
+stats:dsdjumlah_sasaran
+	qb:component [
+qb:measure stats:jumlah_anggota
+],[
+qb:dimension dimensi:kecamatan
+],[
+qb:dimension dimensi:tingkatan_sasaran_didik
+];
+a qb:DataStructureDefinition ;
+.
+
+dimensi:tingkatan_sumber_didik a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Tingkatan_Sumber_Didik" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:tingkatan_sumber_didik ;
+	.
+dimensi:tingkatan_sasaran_didik a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Tingkatan_Sasaran_Didik" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:tingkatan_sasaran_didik ;
+	.
+dimensi:kecamatan a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Kecamatan" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:kecamatan_surabaya ;
+	.
+stats:jumlah_anggota a rdf:Property, qb:MeasureProperty ;
+	rdfs: label "jumlah_anggota" ;
+	rdfs:range xsd:integer ;
+	.
