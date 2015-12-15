@@ -27,7 +27,6 @@
 @prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
 @prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
 
-# -- Data Set --------------------------------------------
 stats:sumberdidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sumber_didik_perkecamatan_surabaya_2011" ;
@@ -38,26 +37,3 @@ stats:sasarandidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sasaran .
-
-# -- Data structure definition ----------------------------
-stats:dsdjumlah_sumber
-	qb:component [
-qb:measure stats:jumlah_anggota
-],[
-qb:dimension dimensi:kecamatan
-],[
-qb:dimension dimensi:tingkatan_sumber_didik
-];
-a qb:DataStructureDefinition ;
-.
-
-stats:dsdjumlah_sasaran
-	qb:component [
-qb:measure stats:jumlah_anggota
-],[
-qb:dimension dimensi:kecamatan
-],[
-qb:dimension dimensi:tingkatan_sasaran_didik
-];
-a qb:DataStructureDefinition ;
-.
