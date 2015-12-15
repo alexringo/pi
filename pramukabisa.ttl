@@ -83,4 +83,6 @@ stats:jumlah_anggota a rdf:Property, qb:MeasureProperty ;
 	rdfs: label "jumlah_anggota" ;
 	rdfs:range xsd:integer ;
 	.
+	
+	
 # -- Code lists -------------------------------------------
