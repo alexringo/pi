@@ -101,3 +101,31 @@ rdfs:label "Kecamatan_di_Surabaya" ;
 skos:hasTopConcept kecamatan:Tegalsari, kecamatan:Genteng, kecamatan:Bubutan, kecamatan:Simokerto, kecamatan:Pabean_Cantikan, kecamatan:Semampir, kecamatan:Krembangan, kecamatan:Kenjeran, kecamatan:Bulak, kecamatan:Tambaksari, kecamatan:Gubeng, kecamatan:Rungkut, kecamatan:Tenggilis_Mejoyo, kecamatan:Gunung_Anyar, kecamatan:Sukolilo, kecamatan:Mulyorejo, kecamatan:Sawahan, kecamatan:Wonokromo, kecamatan:Karangpilang, kecamatan:Dukuh_Pakis, kecamatan:Wiyung, kecamatan:Wonocolo, kecamatan:Gayungan, kecamatan:Jambangan, kecamatan:Tandes, kecamatan:Sukomanunggal, kecamatan:Asemrowo, kecamatan:Benowo, kecamatan:Pakal, kecamatan:Lakarsantri, kecamatan:Sambikerep ;
 skos:notation "Kecamatan_Surabaya" 
 .
+
+konsep:penegak a skos:Concept;
+	rdfs:label "Penegak";
+	skos:inScheme konsep:tingkatan_sasaran_didik 
+	.
+konsep:penggalang
+	a skos:Concept ;
+	rdfs:label "penggalang" ;
+	skos:inScheme konsep:tingkatan_sasaran_didik 
+	.
+konsep:siaga
+	a skos:Concept ;
+	rdfs:label "siaga" ;
+	skos:inScheme konsep:tingkatan_sasaran_didik 
+	.
+konsep:majelis_pembimbing
+	a skos:Concept ;
+	rdfs:label "majelis_pembimbing" ;
+	skos:inScheme konsep:tingkatan_sumber_didik .
+konsep:pelatih
+	a skos:Concept ;
+	rdfs:label "pelatih" ;
+	skos:inScheme konsep:tingkatan_sumber_didik .
+konsep:pembina
+	a skos:Concept ;
+	rdfs:label "pembina" ;
+	skos:inScheme konsep:tingkatan_sumber_didik .
+
