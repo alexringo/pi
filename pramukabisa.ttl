@@ -26,3 +26,14 @@
 @prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
 @prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
 @prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
+
+stats:sumberdidikpramukaSBY2011
+	a qb:DataSet ;
+	rdfs:label "Sumber_didik_perkecamatan_surabaya_2011" ;
+	qb:structure stats:dsdjumlah_sumber ;
+	qb:slice	stats:anggota_kecamatan	.
+
+stats:sasarandidikpramukaSBY2011
+	a qb:DataSet ;
+	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
+	qb:structure stats:dsdjumlah_sasaran .
