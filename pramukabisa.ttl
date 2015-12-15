@@ -37,3 +37,14 @@ stats:sasarandidikpramukaSBY2011
 	a qb:DataSet ;
 	rdfs:label "Sasaran_didik_perkecamatan_surabaya_2011" ;
 	qb:structure stats:dsdjumlah_sasaran .
+	
+stats:dsdjumlah_sumber
+	qb:component [
+qb:measure stats:jumlah_anggota
+],[
+qb:dimension dimensi:kecamatan
+],[
+qb:dimension dimensi:tingkatan_sumber_didik
+];
+a qb:DataStructureDefinition ;
+.
