@@ -48,3 +48,14 @@ qb:dimension dimensi:tingkatan_sumber_didik
 ];
 a qb:DataStructureDefinition ;
 .
+
+stats:dsdjumlah_sasaran
+	qb:component [
+qb:measure stats:jumlah_anggota
+],[
+qb:dimension dimensi:kecamatan
+],[
+qb:dimension dimensi:tingkatan_sasaran_didik
+];
+a qb:DataStructureDefinition ;
+.
