@@ -79,3 +79,7 @@ dimensi:kecamatan a rdf:Property, qb:DimensionProperty;
 	rdfs:range skos:Concept ;
 	qb:codeList konsep:kecamatan_surabaya ;
 	.
+stats:jumlah_anggota a rdf:Property, qb:MeasureProperty ;
+	rdfs: label "jumlah_anggota" ;
+	rdfs:range xsd:integer ;
+	.
