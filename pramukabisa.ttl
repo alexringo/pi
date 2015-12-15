@@ -106,26 +106,4 @@ konsep:penegak a skos:Concept;
 	rdfs:label "Penegak";
 	skos:inScheme konsep:tingkatan_sasaran_didik 
 	.
-konsep:penggalang
-	a skos:Concept ;
-	rdfs:label "penggalang" ;
-	skos:inScheme konsep:tingkatan_sasaran_didik 
-	.
-konsep:siaga
-	a skos:Concept ;
-	rdfs:label "siaga" ;
-	skos:inScheme konsep:tingkatan_sasaran_didik 
-	.
-konsep:majelis_pembimbing
-	a skos:Concept ;
-	rdfs:label "majelis_pembimbing" ;
-	skos:inScheme konsep:tingkatan_sumber_didik .
-konsep:pelatih
-	a skos:Concept ;
-	rdfs:label "pelatih" ;
-	skos:inScheme konsep:tingkatan_sumber_didik .
-konsep:pembina
-	a skos:Concept ;
-	rdfs:label "pembina" ;
-	skos:inScheme konsep:tingkatan_sumber_didik .
 
