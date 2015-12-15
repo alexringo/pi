@@ -59,3 +59,23 @@ qb:dimension dimensi:tingkatan_sasaran_didik
 ];
 a qb:DataStructureDefinition ;
 .
+
+dimensi:tingkatan_sumber_didik a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Tingkatan_Sumber_Didik" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:tingkatan_sumber_didik ;
+	.
+dimensi:tingkatan_sasaran_didik a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Tingkatan_Sasaran_Didik" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:tingkatan_sasaran_didik ;
+	.
+dimensi:kecamatan a rdf:Property, qb:DimensionProperty;
+	rdfs:label "Kecamatan" ;
+	rdfs:range skos:Concept ;
+	qb:codeList konsep:kecamatan_surabaya ;
+	.
+stats:jumlah_anggota a rdf:Property, qb:MeasureProperty ;
+	rdfs: label "jumlah_anggota" ;
+	rdfs:range xsd:integer ;
+	.
